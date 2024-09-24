@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarritoApp.Views.ProvinciaPage"
+             Title="ProvinciaPage">
+    <StackLayout Padding="10">
+        <Label Text="Agregar Nueva Provincia" FontSize="24" HorizontalOptions="Center" />
+
+        <Entry x:Name="NombreProvinciaEntry" Placeholder="Nombre de la provincia" />
+
+        <Picker x:Name="DepartamentoPicker" Title="Selecciona un Departamento" />
+
+        <Button Text="Guardar" Clicked="OnSaveClicked" />
+
+        <ListView x:Name="ProvinciasListView" ItemTapped="OnProvinceTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding NombreProvincia}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

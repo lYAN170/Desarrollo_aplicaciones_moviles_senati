@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarritoApp.Views.DepartamentoPage"
+             Title="DepartamentoPage">
+    <StackLayout Padding="10">
+        <Label Text="Gestión de Departamentos" FontSize="24" HorizontalOptions="Center" />
+
+        <Entry x:Name="NombreDepartamentoEntry" Placeholder="Nombre del departamento" />
+
+        <Button Text="Guardar Departamento" Clicked="OnSaveClicked" />
+
+        <ListView x:Name="DepartamentosListView" ItemTapped="OnDepartmentTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding NombreDepartamento}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

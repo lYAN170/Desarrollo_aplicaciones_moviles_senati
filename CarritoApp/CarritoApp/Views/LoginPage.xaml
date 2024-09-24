@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarritoApp.View.LoginPage"
+             Title="LoginPage">
+
+
+    <VerticalStackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <!-- Contenido centrado en la pantalla -->
+        <VerticalStackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Padding="20">
+            <!-- Caja con sombra alrededor de los campos de entrada y botones -->
+            <Frame>
+                <VerticalStackLayout Spacing="15">
+                    <!-- Etiqueta de bienvenida -->
+                    <Label Text="Bienvenido" Style="{StaticResource TitleStyle}" />
+                    <!-- Campo de nombre de usuario -->
+                    <Entry x:Name="NombreUsuarioEntry" Placeholder="Nombre de Usuario" />
+                    <!-- Campo de contraseña -->
+                    <Entry x:Name="ContrasenaEntry" Placeholder="Contraseña" IsPassword="True" />
+                    <!-- Botón de inicio de sesión -->
+                    <Button Text="Iniciar Sesión" Style="{StaticResource PrimaryButtonStyle}" Clicked="OnLoginButtonClicked" />
+                    <!-- Botón para navegar a la página de registro -->
+                    <Button Text="Crear una cuenta" Style="{StaticResource SecondaryButtonStyle}" Clicked="OnCreateAccountButtonClicked" />
+                    <!-- Mensaje de error -->
+                    <Label x:Name="MensajeLabel" Style="{StaticResource ErrorLabelStyle}" />
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+
+</ContentPage>   
